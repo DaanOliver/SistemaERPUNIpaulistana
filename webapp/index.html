@@ -1,33 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="ptbr">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Pagina de login de recursos humaos da unipaulistana">
-	<meta name="keywords" content="recursos, humanos, unipaulistana">
-	<meta name="author" content="Tempest">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Recursos Humanos - UniPaulistana</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Servlet</title>
 </head>
-<body class="login">
-	<main>
-		<div class="login-page">
-			<div class="logo">
-				<img src="img/logo.png" alt="">
-			</div>
-			<div class="form-content">
-				<form action="servlet1" method="post" class="formlogin">
-					<h4>Bem vindo ao modulo de RH</h4>
-					<br>
-					<input type="text" placeholder="Usuario" name="Usuario" title="Digite seu usuario para fazer login" class="campos"><br>
-					<input type="password" placeholder="Senha" name="Senha" title="Digite sua senha" class="campos"><br>
-					<input type="submit" value="Entrar" id="botaologin">
-				</form>
-			</div>
-		</div>
-	</main>
+
+<body>
+    <h1>Adicionar novo Empregado</h1>
+    <form action="SalvaServlet" method="post">
+        <table>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="nome"></td>
+            </tr>
+            <tr>
+                <td>Senha:</td>
+                <td><input type="password" name="senha"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>
+                    Pais:
+                </td>
+                <td>
+                    <select name="pais" id="" style="width: 150px;">
+                        <option value="Brasil">Brasil</option>
+                        <option value="Bolovia">Bolovia</option>
+                        <option value="Paraguai">Paraguai</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Salvar Empregado">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br><br>
+	<br/>  
+	<a href="VisualizarServlet">ver empregados</a>  
+  
 </body>
 
 </html>
